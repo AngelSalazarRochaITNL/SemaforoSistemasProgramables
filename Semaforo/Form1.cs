@@ -54,6 +54,7 @@ namespace Semaforo
         private void btnReiniciar_Click(object sender, EventArgs e)
         {
             t = 0;
+            cambio = true;
             tV = 1;
             ptbVerdeA.Visible = true;
             ptbVerdeB.Visible = true;
@@ -144,6 +145,12 @@ namespace Semaforo
                 {
                     ptbVerdeC.Visible = true;
                     ptbVerdeD.Visible = true;
+                    ptbRojoA.Visible = true;
+                    ptbRojoB.Visible = true;
+                    ptbAmarilloA.Visible = false;
+                    ptbAmarilloB.Visible = false;
+                    ptbAmarilloC.Visible = false;
+                    ptbAmarilloD.Visible = false;
                 }
                 else
                 {

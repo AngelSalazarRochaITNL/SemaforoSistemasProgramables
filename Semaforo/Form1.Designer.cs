@@ -128,14 +128,13 @@ namespace Semaforo
             this.btnConteoManual.FlatAppearance.BorderSize = 0;
             this.btnConteoManual.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConteoManual.ForeColor = System.Drawing.Color.White;
-            this.btnConteoManual.Location = new System.Drawing.Point(0, 453);
+            this.btnConteoManual.Location = new System.Drawing.Point(0, 408);
             this.btnConteoManual.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
             this.btnConteoManual.Name = "btnConteoManual";
             this.btnConteoManual.Size = new System.Drawing.Size(164, 36);
             this.btnConteoManual.TabIndex = 4;
             this.btnConteoManual.Text = "Conteo manual";
             this.btnConteoManual.UseVisualStyleBackColor = false;
-            this.btnConteoManual.Visible = false;
             this.btnConteoManual.Click += new System.EventHandler(this.btnCambioManual_Click);
             // 
             // btnReiniciar
