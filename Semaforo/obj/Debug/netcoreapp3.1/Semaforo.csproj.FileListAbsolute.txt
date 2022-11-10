@@ -1,0 +1,17 @@
+C:\Users\angel\source\repos\Semaforo\Semaforo\bin\Debug\netcoreapp3.1\Semaforo.exe
+C:\Users\angel\source\repos\Semaforo\Semaforo\bin\Debug\netcoreapp3.1\Semaforo.deps.json
+C:\Users\angel\source\repos\Semaforo\Semaforo\bin\Debug\netcoreapp3.1\Semaforo.runtimeconfig.json
+C:\Users\angel\source\repos\Semaforo\Semaforo\bin\Debug\netcoreapp3.1\Semaforo.runtimeconfig.dev.json
+C:\Users\angel\source\repos\Semaforo\Semaforo\bin\Debug\netcoreapp3.1\Semaforo.dll
+C:\Users\angel\source\repos\Semaforo\Semaforo\bin\Debug\netcoreapp3.1\Semaforo.pdb
+C:\Users\angel\source\repos\Semaforo\Semaforo\obj\Debug\netcoreapp3.1\Semaforo.csproj.AssemblyReference.cache
+C:\Users\angel\source\repos\Semaforo\Semaforo\obj\Debug\netcoreapp3.1\Semaforo.Properties.Resources.resources
+C:\Users\angel\source\repos\Semaforo\Semaforo\obj\Debug\netcoreapp3.1\Semaforo.csproj.GenerateResource.cache
+C:\Users\angel\source\repos\Semaforo\Semaforo\obj\Debug\netcoreapp3.1\Semaforo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\angel\source\repos\Semaforo\Semaforo\obj\Debug\netcoreapp3.1\Semaforo.AssemblyInfoInputs.cache
+C:\Users\angel\source\repos\Semaforo\Semaforo\obj\Debug\netcoreapp3.1\Semaforo.AssemblyInfo.cs
+C:\Users\angel\source\repos\Semaforo\Semaforo\obj\Debug\netcoreapp3.1\Semaforo.csproj.CoreCompileInputs.cache
+C:\Users\angel\source\repos\Semaforo\Semaforo\obj\Debug\netcoreapp3.1\Semaforo.dll
+C:\Users\angel\source\repos\Semaforo\Semaforo\obj\Debug\netcoreapp3.1\Semaforo.pdb
+C:\Users\angel\source\repos\Semaforo\Semaforo\obj\Debug\netcoreapp3.1\Semaforo.genruntimeconfig.cache
+C:\Users\angel\source\repos\Semaforo\Semaforo\obj\Debug\netcoreapp3.1\Semaforo.FrmSemaforo.resources
