@@ -31,11 +31,9 @@ namespace Semaforo
         {
             this.components = new System.ComponentModel.Container();
             this.pnlFondo = new System.Windows.Forms.Panel();
-            this.BtnCambiarColor = new System.Windows.Forms.Button();
             this.btnConteoManual = new System.Windows.Forms.Button();
             this.btnReiniciar = new System.Windows.Forms.Button();
             this.btnPreventivas = new System.Windows.Forms.Button();
-            this.btnPausa = new System.Windows.Forms.Button();
             this.btnIniciar = new System.Windows.Forms.Button();
             this.ptbFondo = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -112,34 +110,15 @@ namespace Semaforo
             // pnlFondo
             // 
             this.pnlFondo.BackColor = System.Drawing.SystemColors.Control;
-            this.pnlFondo.Controls.Add(this.BtnCambiarColor);
             this.pnlFondo.Controls.Add(this.btnConteoManual);
             this.pnlFondo.Controls.Add(this.btnReiniciar);
             this.pnlFondo.Controls.Add(this.btnPreventivas);
-            this.pnlFondo.Controls.Add(this.btnPausa);
             this.pnlFondo.Controls.Add(this.btnIniciar);
             this.pnlFondo.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlFondo.Location = new System.Drawing.Point(0, 0);
             this.pnlFondo.Name = "pnlFondo";
             this.pnlFondo.Size = new System.Drawing.Size(164, 498);
             this.pnlFondo.TabIndex = 0;
-            // 
-            // BtnCambiarColor
-            // 
-            this.BtnCambiarColor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnCambiarColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(35)))), ((int)(((byte)(53)))));
-            this.BtnCambiarColor.FlatAppearance.BorderSize = 0;
-            this.BtnCambiarColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCambiarColor.ForeColor = System.Drawing.Color.White;
-            this.BtnCambiarColor.Location = new System.Drawing.Point(0, 350);
-            this.BtnCambiarColor.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            this.BtnCambiarColor.Name = "BtnCambiarColor";
-            this.BtnCambiarColor.Size = new System.Drawing.Size(164, 36);
-            this.BtnCambiarColor.TabIndex = 5;
-            this.BtnCambiarColor.Text = "Cambiar Color";
-            this.BtnCambiarColor.UseVisualStyleBackColor = false;
-            this.BtnCambiarColor.Click += new System.EventHandler(this.BtnCambiarColor_Click);
             // 
             // btnConteoManual
             // 
@@ -149,24 +128,25 @@ namespace Semaforo
             this.btnConteoManual.FlatAppearance.BorderSize = 0;
             this.btnConteoManual.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConteoManual.ForeColor = System.Drawing.Color.White;
-            this.btnConteoManual.Location = new System.Drawing.Point(0, 291);
+            this.btnConteoManual.Location = new System.Drawing.Point(0, 453);
             this.btnConteoManual.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
             this.btnConteoManual.Name = "btnConteoManual";
             this.btnConteoManual.Size = new System.Drawing.Size(164, 36);
             this.btnConteoManual.TabIndex = 4;
             this.btnConteoManual.Text = "Conteo manual";
             this.btnConteoManual.UseVisualStyleBackColor = false;
+            this.btnConteoManual.Visible = false;
             this.btnConteoManual.Click += new System.EventHandler(this.btnCambioManual_Click);
             // 
             // btnReiniciar
             // 
             this.btnReiniciar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnReiniciar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(35)))), ((int)(((byte)(53)))));
+            this.btnReiniciar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnReiniciar.FlatAppearance.BorderSize = 0;
             this.btnReiniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReiniciar.ForeColor = System.Drawing.Color.White;
-            this.btnReiniciar.Location = new System.Drawing.Point(0, 120);
+            this.btnReiniciar.Location = new System.Drawing.Point(0, 80);
             this.btnReiniciar.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
             this.btnReiniciar.Name = "btnReiniciar";
             this.btnReiniciar.Size = new System.Drawing.Size(164, 36);
@@ -183,30 +163,14 @@ namespace Semaforo
             this.btnPreventivas.FlatAppearance.BorderSize = 0;
             this.btnPreventivas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPreventivas.ForeColor = System.Drawing.Color.White;
-            this.btnPreventivas.Location = new System.Drawing.Point(0, 80);
+            this.btnPreventivas.Location = new System.Drawing.Point(0, 40);
             this.btnPreventivas.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
             this.btnPreventivas.Name = "btnPreventivas";
             this.btnPreventivas.Size = new System.Drawing.Size(164, 36);
             this.btnPreventivas.TabIndex = 2;
             this.btnPreventivas.Text = "Preventivas";
             this.btnPreventivas.UseVisualStyleBackColor = false;
-            // 
-            // btnPausa
-            // 
-            this.btnPausa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPausa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(35)))), ((int)(((byte)(53)))));
-            this.btnPausa.FlatAppearance.BorderSize = 0;
-            this.btnPausa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPausa.ForeColor = System.Drawing.Color.White;
-            this.btnPausa.Location = new System.Drawing.Point(0, 40);
-            this.btnPausa.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            this.btnPausa.Name = "btnPausa";
-            this.btnPausa.Size = new System.Drawing.Size(164, 36);
-            this.btnPausa.TabIndex = 1;
-            this.btnPausa.Text = "Pausa";
-            this.btnPausa.UseVisualStyleBackColor = false;
-            this.btnPausa.Click += new System.EventHandler(this.btnPausa_Click);
+            this.btnPreventivas.Click += new System.EventHandler(this.btnPreventivas_Click);
             // 
             // btnIniciar
             // 
@@ -701,7 +665,6 @@ namespace Semaforo
         private System.Windows.Forms.Panel pnlFondo;
         private System.Windows.Forms.Button btnReiniciar;
         private System.Windows.Forms.Button btnPreventivas;
-        private System.Windows.Forms.Button btnPausa;
         private System.Windows.Forms.Button btnIniciar;
         private System.Windows.Forms.PictureBox ptbFondo;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -739,7 +702,6 @@ namespace Semaforo
         private System.Windows.Forms.Label lblTiempo;
         private System.Windows.Forms.Timer tmrTiempos;
         private System.Windows.Forms.Button btnConteoManual;
-        private System.Windows.Forms.Button BtnCambiarColor;
         private System.Windows.Forms.Label lblTiempoInterno;
     }
 }

@@ -11,25 +11,44 @@ namespace Semaforo
             InitializeComponent();
         }
 
+
+        //ContadorInterno y contador visual, y estado de preventivas
+        int t = 0, tV = 1;
+        bool cambio = true, blnPreventivas = false;
+
+
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-            //t = 1;
-            tmrTiempos.Start();
+            if (btnIniciar.BackColor == Color.FromArgb(38, 35, 53))
+            {
+                tmrTiempos.Start();
+                btnIniciar.BackColor = Color.FromArgb(0, 180, 0);
+                btnIniciar.Text = "Pausar";
+            }
+            else
+            {
+                tmrTiempos.Stop();
+                btnIniciar.BackColor = Color.FromArgb(38, 35, 53);
+                btnIniciar.Text = "Iniciar";
+            }
         }
 
+        //Timer que mueve los tiempos
         private void tmrTiempos_Tick(object sender, EventArgs e)
         {
-            CambiarLuces();
+            if (!blnPreventivas)
+                CambiarLuces();
+            else
+                ActivarPreventivas();
         }
 
+        //botón para hacer pruebas
         private void btnCambioManual_Click(object sender, EventArgs e)
         {
-            CambiarLuces();
-        }
-
-        private void btnPausa_Click(object sender, EventArgs e)
-        {
-            tmrTiempos.Stop();
+            if (!blnPreventivas)
+                CambiarLuces();
+            else
+                ActivarPreventivas();
         }
 
         private void btnReiniciar_Click(object sender, EventArgs e)
@@ -52,10 +71,6 @@ namespace Semaforo
             ImprimirTiempo();
         }
 
-        //ContadorInterno y contador visual
-        int t = 0, tV = 1;
-        bool cambio = true;
-
         private void CambiarLuces()
         {
             if (cambio) //true es verticales
@@ -65,6 +80,12 @@ namespace Semaforo
                 {
                     ptbVerdeA.Visible = true;
                     ptbVerdeB.Visible = true;
+                    ptbRojoC.Visible = true;
+                    ptbRojoD.Visible = true;
+                    ptbAmarilloA.Visible = false;
+                    ptbAmarilloB.Visible = false;
+                    ptbAmarilloC.Visible = false;
+                    ptbAmarilloD.Visible = false;
                 }
                 else
                 {
@@ -216,15 +237,69 @@ namespace Semaforo
             t++;
         }
 
-        private void BtnCambiarColor_Click(object sender, EventArgs e)
+        private void btnPreventivas_Click(object sender, EventArgs e)
         {
-            lblTiempo.ForeColor = Color.FromArgb(0,0,0);
+            //Estado inicial de preventivas
+            t = 0;
+            tV = 0;
+            ptbVerdeA.Visible = false;
+            ptbVerdeB.Visible = false;
+            ptbVerdeC.Visible = false;
+            ptbVerdeD.Visible = false;
+            ptbAmarilloA.Visible = true;
+            ptbAmarilloB.Visible = true;
+            ptbAmarilloC.Visible = true;
+            ptbAmarilloD.Visible = true;
+            ptbRojoA.Visible = false;
+            ptbRojoB.Visible = false;
+            ptbRojoC.Visible = false;
+            ptbRojoD.Visible = false;
+            lblTiempo.ForeColor = Color.FromArgb(255, 255, 0);
+
+            //Activar las preventivas
+            ActivarPreventivas();
+            blnPreventivas = !blnPreventivas;
+            if (blnPreventivas)
+                btnPreventivas.BackColor = Color.FromArgb(138, 138, 0);
+            else
+                btnPreventivas.BackColor = Color.FromArgb(38, 35, 53);
         }
 
         private void ImprimirTiempo()
         {
-            lblTiempo.Text = tV.ToString();
-            //lblTiempoInterno.Text = t.ToString();
+            if (!blnPreventivas)
+                lblTiempo.Text = tV.ToString();
+            else
+                lblTiempo.Text = "0";
+        }
+
+        private void ActivarPreventivas()
+        {
+            if (ptbAmarilloA.Visible == true)
+            {
+                ptbAmarilloA.Visible = false;
+                ptbAmarilloB.Visible = false;
+                ptbAmarilloC.Visible = false;
+                ptbAmarilloD.Visible = false;
+                lblTiempo.ForeColor = Color.FromArgb(90,90,90);
+            }
+            else
+            {
+                ptbAmarilloA.Visible = true;
+                ptbAmarilloB.Visible = true;
+                ptbAmarilloC.Visible = true;
+                ptbAmarilloD.Visible = true;
+                lblTiempo.ForeColor = Color.FromArgb(255, 255, 0);
+            }
+            ptbRojoA.Visible = false;
+            ptbRojoB.Visible = false;
+            ptbRojoC.Visible = false;
+            ptbRojoD.Visible = false;
+            ptbVerdeA.Visible = false;
+            ptbVerdeB.Visible = false;
+            ptbVerdeC.Visible = false;
+            ptbVerdeD.Visible = false;
+            ImprimirTiempo();
         }
     }
 }
